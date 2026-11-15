@@ -2,9 +2,51 @@
 
 # Wick's Combat Log
 
+<!-- wick:badges:start -->
+[![Downloads](https://img.shields.io/curseforge/dt/1525232?style=flat-square&labelColor=171124&label=downloads&color=4FC778)](https://www.curseforge.com/wow/addons/wicks-combat-log)
+![TBC Anniversary](https://img.shields.io/badge/client-TBC%20Anniversary-383058?style=flat-square&labelColor=171124)
+[![License](https://img.shields.io/badge/license-MIT%20%2B%20trademark-383058?style=flat-square&labelColor=171124)](LICENSE)
+[![Discord](https://img.shields.io/badge/discord-join-4FC778?style=flat-square&labelColor=171124)](https://discord.gg/GWGTMhYBZY)
+<!-- wick:badges:end -->
+
 > Raw `COMBAT_LOG_EVENT_UNFILTERED` viewer. Every subevent, every arg, all the fields Blizzard's default chat log strips out.
 
 Part of the **[Wick suite](https://github.com/Wicks-mods/WickSuite)**: precision addons built around a single fel-green-on-deep-purple aesthetic.
+
+## Features
+
+- **Live event list**: every CLEU subevent, newest at top. Columns: timestamp · subevent · source → dest · spell · amount.
+- **Click-to-inspect side panel**: every raw arg from `CombatLogGetCurrentEventInfo()` with field names. Flag-style integers rendered in hex too.
+- **Display filters**: subevent family checkboxes (Damage / Heal / Aura / Cast / Misc), source dropdown (Anyone / Mine / My Pet / Target), spell-name substring search. Capture is always on; filters only affect what's drawn.
+- **Pause / resume** capture from the filter bar or via slash command.
+- **5,000-event ring buffer**: bounded memory, no SavedVariables bloat.
+
+## Install
+
+- **Manual:** drop the `WicksCombatLog` folder into `World of Warcraft\_classic_\Interface\AddOns\`.
+
+## Usage
+
+```
+/wcl              toggle the panel
+/wcl pause        stop capturing events
+/wcl resume       resume capturing
+/wcl clear        drop the buffer
+/wcl reset        recenter the panel
+```
+
+## Compatibility
+
+- **TBC Classic** (Burning Crusade / Anniversary): Interface `20505`.
+
+## Brand
+
+Uses the locked Wick palette and 10px/2px fel-green L-bracket chrome. See:
+- `UI.lua` / `Detail.lua`: palette tokens at top of file
+- `CHANGELOG.md`: version history
+- `logo.svg`: logomark source
+
+## More from Wick
 
 <!-- wick:suite-table:start -->
 | Addon | GitHub | CurseForge |
@@ -27,42 +69,10 @@ Part of the **[Wick suite](https://github.com/Wicks-mods/WickSuite)**: precision
 | **Wick's Demons and Things** | [repo](https://github.com/Wicks-mods/WicksDemonsAndThings) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-demons-and-things) |
 | **Wick's UI** | [repo](https://github.com/Wicks-mods/WicksUIForever) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-ui) |
 | **Wick's Reminders** | [repo](https://github.com/Wicks-mods/WicksReminders) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-reminders) |
+| **Wick's Map** | [repo](https://github.com/Wicks-mods/WicksMap) | [CurseForge](https://www.curseforge.com/wow/addons/wicks-map) |
 
 **Community:** [Discord](https://discord.gg/GWGTMhYBZY)
 <!-- wick:suite-table:end -->
-
-## Features
-
-- **Live event list** — every CLEU subevent, newest at top. Columns: timestamp · subevent · source → dest · spell · amount.
-- **Click-to-inspect side panel** — every raw arg from `CombatLogGetCurrentEventInfo()` with field names. Flag-style integers rendered in hex too.
-- **Display filters** — subevent family checkboxes (Damage / Heal / Aura / Cast / Misc), source dropdown (Anyone / Mine / My Pet / Target), spell-name substring search. Capture is always on; filters only affect what's drawn.
-- **Pause / resume** capture from the filter bar or via slash command.
-- **5,000-event ring buffer** — bounded memory, no SavedVariables bloat.
-
-## Install
-
-- **Manual:** drop the `WicksCombatLog` folder into `World of Warcraft\_classic_\Interface\AddOns\`.
-
-## Usage
-
-```
-/wcl              toggle the panel
-/wcl pause        stop capturing events
-/wcl resume       resume capturing
-/wcl clear        drop the buffer
-/wcl reset        recenter the panel
-```
-
-## Compatibility
-
-- **TBC Classic** (Burning Crusade / Anniversary) — Interface `20505`.
-
-## Brand
-
-Uses the locked Wick palette and 10px/2px fel-green L-bracket chrome. See:
-- `UI.lua` / `Detail.lua` — palette tokens at top of file
-- `CHANGELOG.md` — version history
-- `logo.svg` — logomark source
 
 ## License
 
