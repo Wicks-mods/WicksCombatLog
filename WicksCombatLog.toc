@@ -2,7 +2,7 @@
 ## Title: |cffD4C8A1Wick's|r |cff4FC778Combat Log|r
 ## Notes: Raw COMBAT_LOG_EVENT_UNFILTERED viewer. Live event list with filters and side-panel raw-arg inspection.
 ## Author: Wick
-## Version: 0.1.2
+## Version: 0.1.3
 ## SavedVariables: WCLSettings
 ## IconTexture: Interface\Icons\INV_Sword_04
 ## Category: Wick's Mods

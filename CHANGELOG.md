@@ -1,6 +1,6 @@
 # Wick's Combat Log — Changelog
 
-## Unreleased
+## 0.1.3 (2026-11-15)
 
 - Shows in the game's addon list with an icon and the two-tone Wick title, under a Wick's Mods heading.
 
